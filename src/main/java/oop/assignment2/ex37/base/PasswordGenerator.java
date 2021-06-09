@@ -14,23 +14,26 @@ public class PasswordGenerator {
         Random rand = new Random();
         StringBuilder password = new StringBuilder();
 
+        //  generates "length" letters in the password
         for(int i = 0; i < length; i++) {
             int randomIndex = rand.nextInt(letters.length());
             password.append(letters.charAt(randomIndex));
         }
+        //  generates "numbers" integers in the password
         for(int i = 0; i < numbers; i++) {
             int randomIndex = rand.nextInt(integers.length());
             password.append(integers.charAt(randomIndex));
         }
+        //  generates "specialChar" special in the password
         for(int i = 0; i < specialChar; i++) {
             int randomIndex = rand.nextInt(special.length());
             password.append(special.charAt(randomIndex));
         }
+        //  generates one last letter at the end
         int randomIndex = ((int) (Math.random() * (26)));
         password.append(letters.charAt(randomIndex));
         return password.toString();
     }
-
 
     public static void output(String pass) {
         List<String> ret = Arrays.asList(pass);

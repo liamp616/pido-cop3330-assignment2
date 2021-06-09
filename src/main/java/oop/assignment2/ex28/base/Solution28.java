@@ -40,15 +40,19 @@ public class Solution28 {
     private static final Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int total = 0;
-
-        for(int i = 0; i < 5; i++) {
-            total += addNumber();
-        }
+        int total = loop(0);
         System.out.println("The total is " + total + ".");
     }
 
-    private static int addNumber() {
+    public static int loop(int total) {
+        //  iterates 5 times, just adds inputted number to the total
+        for(int i = 0; i < 5; i++) {
+            total += addNumber();
+        }
+        return total;
+    }
+
+    public static int addNumber() {
         System.out.print("Enter a number: ");
         return in.nextInt();
     }

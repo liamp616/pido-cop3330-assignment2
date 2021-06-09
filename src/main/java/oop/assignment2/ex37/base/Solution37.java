@@ -40,15 +40,17 @@ public class Solution37 {
     private static final Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int minLength = readMinLength();
-        int specialChar = readSpecialChar();
-        int numbers = readNumbers();
+        Solution37 solution = new Solution37();
+        int minLength = solution.readMinLength();
+        int specialChar = solution.readSpecialChar();
+        int numbers = solution.readNumbers();
 
         PasswordGenerator pw = new PasswordGenerator();
-        String pass = PasswordGenerator.generate(minLength, specialChar, numbers);
-        PasswordGenerator.output(pass);
+        String pass = pw.generate(minLength, specialChar, numbers);
+        pw.output(pass);
     }
 
+    //  checks to see if input is a numerical value
     private static int readNumbers() {
         boolean isNumber = false;
         int ret = 0;
@@ -68,6 +70,7 @@ public class Solution37 {
         return ret;
     }
 
+    //  checks to see if input is a numerical value
     private static int readSpecialChar() {
         boolean isNumber = false;
         int ret = 0;
@@ -87,6 +90,7 @@ public class Solution37 {
         return ret;
     }
 
+    //  checks to see if input is a numerical value
     private static int readMinLength() {
         boolean isNumber = false;
         int ret = 0;

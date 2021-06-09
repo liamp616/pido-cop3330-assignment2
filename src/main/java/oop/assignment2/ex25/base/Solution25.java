@@ -43,12 +43,12 @@ public class Solution25 {
     private static String password;
 
     public static void main(String[] args) {
-        //  read in password
-        readPassword();
-
+        Solution25 solution = new Solution25();
         PasswordValidator pv = new PasswordValidator();
+        //  read in password
+        solution.readPassword();
 
-        int result = PasswordValidator.passwordValidator(password);
+        int result = pv.passwordValidator(password);
 
         PasswordValidator.output(result, password);
     }

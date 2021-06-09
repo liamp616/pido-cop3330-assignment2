@@ -12,6 +12,7 @@ public class PasswordValidator {
         //  5 = very strong password
 
         if(password.length() <= 8) {
+            //  checks to see if the length it is less than or equal to 8
             if(onlyNum(password)) {
                 return 1;
             } else if(onlyChar(password)) {
@@ -20,6 +21,7 @@ public class PasswordValidator {
                 return 2;
             }
         } else if(password.length() >= 8) {
+            //  checks to see if the length it is greater than or equal to 8
             if(isVeryStrong(password)) {
                 return 5;
             } else if(hasOneNum(password)) {
@@ -31,6 +33,7 @@ public class PasswordValidator {
         return 0;
     }
 
+    //  checks if the password is very strong - see requirements in Solution25 comments
     private static boolean isVeryStrong(String password) {
         boolean letterFlag = false;
         boolean numberFlag = false;
@@ -55,10 +58,12 @@ public class PasswordValidator {
         return false;
     }
 
+    //  checks if the password has atleast one number
     private static boolean hasOneNum(String password) {
         return password.matches(".*\\d+.*");
     }
 
+    //  checks if the password ONLY has numbers
     private static boolean onlyNum(String password) {
         for(int i = 0; i < password.length(); i++) {
             //  checks if the char is a digit
@@ -71,6 +76,7 @@ public class PasswordValidator {
         return false;
     }
 
+    //  checks if the password ONLY has characters
     public static boolean onlyChar(String password) {
         return password.matches("[a-zA-Z]+");
     }

@@ -60,7 +60,7 @@ public class Solution26 {
         readInputs();
 
         PaymentCalculator pc = new PaymentCalculator();
-        months = PaymentCalculator.calculateMonthsUntilPaidOff(rate, balance, monthly);
+        months = pc.calculateMonthsUntilPaidOff(rate, balance, monthly);
 
         //System.out.println(balance);
         //System.out.println(rate);

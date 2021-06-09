@@ -41,7 +41,9 @@ public class Solution30 {
     }
 
     private static void createTable(int n) {
+        //  row
         for(int i = 1; i <= n; i++) {
+            //  columns
             for(int j = 1; j <= n; j++) {
                 System.out.printf("%3d\t", i * j);
             }

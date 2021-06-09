@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class processing {
 
+    //  finds the minimum of the array
     public static int min(ArrayList<Integer> times) {
         int min = times.get(1);
 
@@ -15,6 +16,7 @@ public class processing {
         return min;
     }
 
+    //  finds the maximum of the array
     public static int max(ArrayList<Integer> times) {
         int max = times.get(1);
 
@@ -26,6 +28,7 @@ public class processing {
         return max;
     }
 
+    //  finds the average of the array
     public static double average(ArrayList<Integer> times) {
         double total = 0;
         for(int i = 0; i < times.size(); i++) {
@@ -34,6 +37,7 @@ public class processing {
         return total / times.size();
     }
 
+    //  finds the standard deviation of the array
     public static double std(ArrayList<Integer> times) {
         double sum = 0.0;
         double mean = 0.0;

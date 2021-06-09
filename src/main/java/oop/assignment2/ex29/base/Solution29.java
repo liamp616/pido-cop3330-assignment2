@@ -49,12 +49,16 @@ public class Solution29 {
     private static int rate;
 
     public static void main(String[] args) {
-        readInput();
+        Solution29 solution = new Solution29();
+        solution.readInput();
         System.out.println("It will take " + 72/rate + " years to double your initial investment.");
     }
 
-    private static void readInput() {
+    public static void readInput() {
+        //  flag to see if user input is a numerical value. will be checked true if it is
         boolean isNumber = false;
+
+        //  will continue to be in this do while loop until the rate is correctly inputted
         do {
             System.out.print("What is the rate of return? ");
             input = in.nextLine();
@@ -62,6 +66,7 @@ public class Solution29 {
             try{
                 rate = Integer.valueOf(input);
 
+                //  checks to see if the input is less than or equal to 0 - not a valid input
                 if(rate <= 0) {
                     System.out.println("Sorry. That's not a valid input.");
                     isNumber = false;
@@ -69,6 +74,7 @@ public class Solution29 {
                     isNumber = true;
                 }
             }catch (NumberFormatException e) {
+                //  catches to see if user inputted a non-numerical value
                 System.out.println("Sorry. That's not a valid input.");
                 isNumber = false;
             }

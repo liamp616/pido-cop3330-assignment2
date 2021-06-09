@@ -43,10 +43,11 @@ public class Solution35 {
     private static final Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Solution35 solution = new Solution35();
         ArrayList<String> names = new ArrayList<String>();
 
-        inputNames(names);
-        chooseWinner(names);
+        solution.inputNames(names);
+        solution.chooseWinner(names);
     }
 
     private static void chooseWinner(ArrayList<String> names) {
@@ -55,6 +56,7 @@ public class Solution35 {
     }
 
     private static void inputNames(ArrayList<String> names) {
+        //  flag to see if user wants to keep inputting names
         boolean addMore = true;
 
         while(addMore) {
@@ -62,6 +64,7 @@ public class Solution35 {
             String input = in.nextLine();
 
             if(input.isEmpty()) {
+                //  addMore is set to false when they input nothing and stops the input
                 addMore = false;
             } else {
                 names.add(input);

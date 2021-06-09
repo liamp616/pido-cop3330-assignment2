@@ -43,7 +43,6 @@ public class Solution24 {
         boolean result = ad.isAnagram(word1, word2);
 
         String output = generateOutput(result);
-
         System.out.println(output);
     }
 

@@ -49,11 +49,12 @@ public class Solution34 {
     private static final Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Solution34 solution = new Solution34();
         String [] employee = {"John Smith", "Jackie Jackson", "Chris Jones", "Amanda Cullen", "Jeremy Goodwin"};
 
-        printEmployees(employee);
-        employee = removeEmployee(employee);
-        printEmployees(employee);
+        solution.printEmployees(employee);
+        employee = solution.removeEmployee(employee);
+        solution.printEmployees(employee);
     }
 
     private static String[] removeEmployee(String[] employee) {
@@ -66,6 +67,7 @@ public class Solution34 {
         int employeeIndex = 0;
 
         for(int i = 0; i < employee.length; i++) {
+            //  employeeIndex gets incremented when the employee inputted does not equal the employee at i in the array
             if(!employee[i].equalsIgnoreCase(input)) {
                 newEmployee[employeeIndex] = employee[i];
                 employeeIndex++;

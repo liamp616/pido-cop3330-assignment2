@@ -51,6 +51,5 @@ public class Solution39 {
     public static void main(String[] args) {
         ArrayList<HashMap> employees = new ArrayList<HashMap>();
 
-
     }
 }

@@ -67,18 +67,21 @@ public class Solution32 {
 
     public static void main(String[] args) {
 
+        //  flag to see whether the user wants to play again
         boolean playAgain = false;
 
         GuessingGame gg = new GuessingGame();
 
         do {
             int difficulty = readDiff();
-            GuessingGame.game(difficulty);
+            gg.game(difficulty);
             String again = again();
 
+            //  if user wants to play again it will be set to false
             if(again.equals("y")) {
                 playAgain = false;
             }
+            //  if user does not want to play again it will be set to true
             if(again.equals("n")) {
                 playAgain = true;
             }
@@ -86,6 +89,7 @@ public class Solution32 {
 
     }
 
+    //  checks to see if the user inputted either "y" or "n", won't accept anything else
     private static String again() {
         boolean play = false;
         String ret;
@@ -108,6 +112,7 @@ public class Solution32 {
         return ret;
     }
 
+    //  checks to see if the user inputted a numerical value
     private static int readDiff() {
         boolean isNumber = false;
         int ret = 1;

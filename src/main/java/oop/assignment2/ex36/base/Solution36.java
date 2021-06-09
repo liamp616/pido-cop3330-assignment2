@@ -51,14 +51,16 @@ public class Solution36 {
     private static double std;
 
     public static void main(String[] args) {
+        Solution36 solution = new Solution36();
         ArrayList<Integer> times = new ArrayList<Integer>();
 
-        processing p = new processing();
-        inputTimes(times);
-        process(times);
-        output(times);
+        processing processing = new processing();
+        solution.inputTimes(times);
+        solution.process(times);
+        solution.output(times);
     }
 
+    //  processing of the array
     private static void process(ArrayList<Integer> times) {
         avg = processing.average(times);
         min = processing.min(times);
@@ -78,6 +80,7 @@ public class Solution36 {
         System.out.println("The standard deviation is " + Math.round(std * 100.00) / 100.0);
     }
 
+    //  checks to see if user inputted numerical value
     private static void inputTimes(ArrayList<Integer> times) {
         boolean addMore = false;
         do {

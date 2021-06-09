@@ -35,9 +35,10 @@ public class Solution38 {
     private static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Solution38 solution = new Solution38();
         int[] numbers = readNumbers();
         ArrayList<Integer> newNumbers = filterEvenNumbers(numbers);
-        output(newNumbers);
+        solution.output(newNumbers);
 
     }
 
@@ -49,6 +50,7 @@ public class Solution38 {
         System.out.print(newNumbers.get(newNumbers.size()-1) + ".");
     }
 
+    //  inserts even numbers into new arraylist and returns it
     private static ArrayList<Integer> filterEvenNumbers(int[] numbers) {
         ArrayList<Integer> ret = new ArrayList<Integer>();
 
@@ -60,7 +62,7 @@ public class Solution38 {
         return ret;
     }
 
-
+    //  reads in the line of inputs and inserts each number separated by a space using regex into the array
     private static int[] readNumbers() {
         System.out.print("Enter a list of numbers, separated by spaces: ");
         String sampleString = in.nextLine();

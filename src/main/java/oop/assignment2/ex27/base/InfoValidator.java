@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 public class InfoValidator {
 
+    //  these booleans will be checked true if it is filled in correctly
     public static boolean firstFlag = false;
     public static boolean lastFlag = false;
     public static boolean zipFlag = false;
@@ -16,12 +17,14 @@ public class InfoValidator {
         validateZip(zip);
         validateId(id);
 
+        //  checks if no errors were found through booleans
         if(firstFlag && lastFlag && zipFlag && idFlag) {
             System.out.println("There were no errors found.");
         }
     }
 
-    private static void validateId(String id) {
+    //  checks if the id is filled in the correct format
+    public static void validateId(String id) {
         Pattern pattern = Pattern.compile("\\w{2}-\\d{4}");
         Matcher matcher = pattern.matcher(id);
 
@@ -34,7 +37,8 @@ public class InfoValidator {
         }
     }
 
-    private static void validateZip(String zip) {
+    //  checks if the zip code is filled in correctly
+    public static void validateZip(String zip) {
         if(zip.isEmpty()) {
             System.out.println("The ZIP code must be filled in");
         } else if(!(zip.matches("[0-9]+"))) {
@@ -44,7 +48,8 @@ public class InfoValidator {
         }
     }
 
-    private static void validateLast(String last) {
+    //  checks if the last name is filled in correctly
+    public static void validateLast(String last) {
         if(last.isEmpty()) {
             System.out.println("The last name must be filled in.");
         } else if(last.length() < 2) {
@@ -54,7 +59,8 @@ public class InfoValidator {
         }
     }
 
-    private static void validateFirst(String first) {
+    //  checks if the first name is filled in correctly
+    public static void validateFirst(String first) {
         if(first.isEmpty()) {
             System.out.println("The first name must be filled in");
         } else if(first.length() < 2) {

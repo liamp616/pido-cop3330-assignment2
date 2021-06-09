@@ -7,6 +7,7 @@ public class InputValidator {
     private static String input;
     private static Scanner in = new Scanner(System.in);
 
+    //  checks to see if user inputted a numerical value
     public static int inputAge() {
         boolean isNumber = false;
         int age = 1;
@@ -31,6 +32,8 @@ public class InputValidator {
         return age;
     }
 
+
+    //  checks to see if user inputted a numerical value
     public static int inputHeartRate() {
         boolean isNumber = false;
         int heartRate = 1;

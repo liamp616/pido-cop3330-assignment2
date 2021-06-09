@@ -38,9 +38,10 @@ public class Solution33 {
     private static final String[] answers = {"Yes", "No", "Maybe", "Ask again later."};
 
     public static void main(String[] args) {
-        readInput();
-        int random = generateRandom();
-        output(random);
+        Solution33 solution = new Solution33();
+        solution.readInput();
+        int random = solution.generateRandom();      //  generates random number
+        solution.output(random);
     }
 
     private static void output(int random) {
@@ -62,6 +63,7 @@ public class Solution33 {
 
     private static int generateRandom() {
         Random rand = new Random();
+        //  bound is 4 since we only have 4 answers
         return rand.nextInt(4);
     }
 

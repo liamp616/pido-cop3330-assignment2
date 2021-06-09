@@ -57,14 +57,16 @@ public class Solution27 {
     private static final Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String first = readFirst();
-        String last = readLast();
-        String zip = readZIP();
-        String id = readId();
+        Solution27 solution = new Solution27();
+
+        String first = solution.readFirst();
+        String last = solution.readLast();
+        String zip = solution.readZIP();
+        String id = solution.readId();
 
         InfoValidator iv = new InfoValidator();
 
-        InfoValidator.validateInput(first, last, zip, id);
+        iv.validateInput(first, last, zip, id);
     }
 
     private static String readId() {

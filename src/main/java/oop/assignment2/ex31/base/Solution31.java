@@ -48,12 +48,13 @@ public class Solution31 {
     private static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
+        Solution31 solution = new Solution31();
         InputValidator iv = new InputValidator();
 
-        int age = InputValidator.inputAge();
-        int heartRate = InputValidator.inputHeartRate();
+        int age = iv.inputAge();
+        int heartRate = iv.inputHeartRate();
 
-        output(age, heartRate);
+        solution.output(age, heartRate);
     }
 
     private static void output(int age, int heartRate) {
