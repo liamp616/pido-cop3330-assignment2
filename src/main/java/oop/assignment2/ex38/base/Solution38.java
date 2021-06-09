@@ -39,10 +39,9 @@ public class Solution38 {
         int[] numbers = readNumbers();
         ArrayList<Integer> newNumbers = filterEvenNumbers(numbers);
         solution.output(newNumbers);
-
     }
 
-    private static void output(ArrayList<Integer> newNumbers) {
+    public static void output(ArrayList<Integer> newNumbers) {
         System.out.print("The even numbers are ");
         for(int i = 0; i < newNumbers.size()-1; i++) {
             System.out.print(newNumbers.get(i) + " ");
@@ -51,7 +50,7 @@ public class Solution38 {
     }
 
     //  inserts even numbers into new arraylist and returns it
-    private static ArrayList<Integer> filterEvenNumbers(int[] numbers) {
+    public static ArrayList<Integer> filterEvenNumbers(int[] numbers) {
         ArrayList<Integer> ret = new ArrayList<Integer>();
 
         for(int i = 0; i < numbers.length; i++) {
@@ -63,7 +62,7 @@ public class Solution38 {
     }
 
     //  reads in the line of inputs and inserts each number separated by a space using regex into the array
-    private static int[] readNumbers() {
+    public static int[] readNumbers() {
         System.out.print("Enter a list of numbers, separated by spaces: ");
         String sampleString = in.nextLine();
         String[] stringArrays = sampleString.split("\\s+");
