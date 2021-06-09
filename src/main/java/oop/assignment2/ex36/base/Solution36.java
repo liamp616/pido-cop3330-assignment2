@@ -55,15 +55,15 @@ public class Solution36 {
 
         processing p = new processing();
         inputTimes(times);
-        find(times);
+        process(times);
         output(times);
     }
 
-    private static void find(ArrayList<Integer> times) {
-        avg = processing.findAverage(times);
-        min = processing.findMin(times);
-        max = processing.findMax(times);
-        std = processing.findStd(times);
+    private static void process(ArrayList<Integer> times) {
+        avg = processing.average(times);
+        min = processing.min(times);
+        max = processing.max(times);
+        std = processing.std(times);
     }
 
     private static void output(ArrayList<Integer> times) {

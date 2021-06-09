@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class processing {
 
-    public static int findMin(ArrayList<Integer> times) {
+    public static int min(ArrayList<Integer> times) {
         int min = times.get(1);
 
         for(int i = 0; i < times.size(); i++) {
@@ -15,7 +15,7 @@ public class processing {
         return min;
     }
 
-    public static int findMax(ArrayList<Integer> times) {
+    public static int max(ArrayList<Integer> times) {
         int max = times.get(1);
 
         for(int i = 0; i < times.size(); i++) {
@@ -26,7 +26,7 @@ public class processing {
         return max;
     }
 
-    public static double findAverage(ArrayList<Integer> times) {
+    public static double average(ArrayList<Integer> times) {
         double total = 0;
         for(int i = 0; i < times.size(); i++) {
             total += times.get(i);
@@ -34,7 +34,7 @@ public class processing {
         return total / times.size();
     }
 
-    public static double findStd(ArrayList<Integer> times) {
+    public static double std(ArrayList<Integer> times) {
         double sum = 0.0;
         double mean = 0.0;
         double standardDeviation = 0.0;
