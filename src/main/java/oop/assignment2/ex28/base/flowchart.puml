@@ -1,0 +1,5 @@
+@startuml
+
+total -[#red]> "addNumber()" : number inputted from addNumber() is added to the total
+"addNumber()" -[#blue]> total : new total
+@enduml
