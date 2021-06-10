@@ -52,20 +52,22 @@ public class Solution26 {
     private static final Scanner in = new Scanner(System.in);
 
     private static int months;      //  n
-    private static double rate;     //  i
+    private static double apr;     //  i
     private static double balance;     //  b
     private static double monthly;     //  p
 
     public static void main(String[] args) {
-        readInputs();
+        Solution26 solution = new Solution26();
+        solution.readInputs();
 
         PaymentCalculator pc = new PaymentCalculator();
-        months = pc.calculateMonthsUntilPaidOff(rate, balance, monthly);
+        months = pc.calculateMonthsUntilPaidOff(apr, balance, monthly);
 
-        //System.out.println(balance);
-        //System.out.println(rate);
-        //System.out.println(monthly);
+        solution.output(months);
 
+    }
+
+    private void output(int months) {
         System.out.println("It will take you " + months + " months to pay off this card.");
     }
 
@@ -74,7 +76,7 @@ public class Solution26 {
         balance = in.nextInt();
 
         System.out.print("What is the APR on the card (as a percent)? ");
-        rate = in.nextDouble();
+        apr = in.nextDouble();
 
         System.out.print("What is the monthly payment you can make? ");
         monthly = in.nextInt();
