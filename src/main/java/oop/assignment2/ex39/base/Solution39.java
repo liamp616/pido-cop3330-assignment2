@@ -41,15 +41,25 @@ Use a database such as MySQL, or a key-value store such as Redis, to store the e
 
 package oop.assignment2.ex39.base;
 
-import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.ArrayList;
 
 public class Solution39 {
     private static final Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
-        ArrayList<HashMap> employees = new ArrayList<HashMap>();
+        Solution39 solution = new Solution39();
+        createEmployees ce = new createEmployees();
+        Sorting sort = new Sorting();
+
+        List<Map<String, String>> employees = ce.create();
+        System.out.println(employees.get(0));
+
+        for(int i = 0; i < employees.size(); i++) {
+
+        }
 
     }
 }
